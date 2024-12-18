@@ -16,7 +16,7 @@ namespace Veritabani
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmAnasayfa());
+            Application.Run(new FormGiris());
         }
     }
 }
