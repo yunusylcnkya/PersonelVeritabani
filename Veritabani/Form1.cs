@@ -21,6 +21,18 @@ namespace Veritabani
             InitializeComponent();
         }
 
+        private void Temizle()
+        {
+            txtAd.Text= string.Empty;
+            txtId.Text= string.Empty;
+            txtMeslek.Text= string.Empty;
+            txtSoyad.Text= string.Empty;
+            maskedTxtMaas.Text= string.Empty;
+            cmbxSehir.Text= string.Empty;   
+            radioButtonEvli.Checked = false;
+            radioButtonBekar.Checked = false;
+            txtAd.Focus();
+        }
 
         private void FrmAnasayfa_Load(object sender, EventArgs e)
         {
@@ -60,6 +72,11 @@ namespace Veritabani
         {
             labelGizli.Text = "False";
 
+        }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            Temizle();
         }
     }
 }
