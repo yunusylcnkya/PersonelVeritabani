@@ -67,6 +67,7 @@
             this.perMaasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.perDurumDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.perMeslekDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelGizli = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -220,9 +221,9 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(187, 37);
+            this.txtId.Location = new System.Drawing.Point(290, 37);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(253, 31);
+            this.txtId.Size = new System.Drawing.Size(150, 31);
             this.txtId.TabIndex = 0;
             // 
             // txtAd
@@ -273,6 +274,7 @@
             this.radioButtonEvli.TabStop = true;
             this.radioButtonEvli.Text = "Evli";
             this.radioButtonEvli.UseVisualStyleBackColor = true;
+            this.radioButtonEvli.CheckedChanged += new System.EventHandler(this.radioButtonEvli_CheckedChanged);
             // 
             // radioButtonBekar
             // 
@@ -284,6 +286,7 @@
             this.radioButtonBekar.TabStop = true;
             this.radioButtonBekar.Text = "Bekar";
             this.radioButtonBekar.UseVisualStyleBackColor = true;
+            this.radioButtonBekar.CheckedChanged += new System.EventHandler(this.radioButtonBekar_CheckedChanged);
             // 
             // btnListele
             // 
@@ -421,12 +424,23 @@
             this.perMeslekDataGridViewTextBoxColumn.HeaderText = "PerMeslek";
             this.perMeslekDataGridViewTextBoxColumn.Name = "perMeslekDataGridViewTextBoxColumn";
             // 
+            // labelGizli
+            // 
+            this.labelGizli.AutoSize = true;
+            this.labelGizli.Location = new System.Drawing.Point(912, 337);
+            this.labelGizli.Name = "labelGizli";
+            this.labelGizli.Size = new System.Drawing.Size(78, 23);
+            this.labelGizli.TabIndex = 2;
+            this.labelGizli.Text = "labelGizli";
+            this.labelGizli.Visible = false;
+            // 
             // FrmAnasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(1280, 758);
+            this.Controls.Add(this.labelGizli);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
@@ -447,6 +461,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.personelVeritabaniDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblPersonelBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -489,6 +504,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn perMaasDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn perDurumDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn perMeslekDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label labelGizli;
     }
 }
 
